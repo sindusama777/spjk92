@@ -1,9 +1,3 @@
--- Simple block sstool and unluac --
-while(nil)do;local i={}if(i.i)then;i.i=(i.i(i))end;end
-
--- Super Block sstool Test --
-while(nil)do;for i=i,i do;local i={}if(i.i)then;i.i=i.i(i)end;for ii=i.i,i.i,i.i do;local ii={}if(ii.i)then;ii.i=ii.i()end;for iii=i,ii.i,i do;local iii={}if(iii.i)then;iii.i=iii.i(i)end;for iiii=i,ii,iii.i do;local iiii={}if(iiii.i)then;iiii.i=iiii.i(i)end;local iiii={}if(iiii.i)then;iiii.i=(iiii|iii|ii|i)(i)end;end;local iii={}if(iii.i)then;iii.i=(true|iii|ii|i)(i)end;end;local ii={}if(ii.i)then;ii.i=(true|false|ii|i)(i)end;end;local i={}if(i.i)then;i.i=(true|false|nil|i)(i)end;return(true|false|nil)end;return;end
-
 if gg.PACKAGE  == 'com.hydsxi.rjr' then
 else
 gg.alert("Gunakan Game Guardian Versi ɢɢ SPJK untuk Menjalankan Script Ini\nUse My Game Guardian To Run Script", "[•] Download")
@@ -12,9 +6,6 @@ os.exit()
 while true do
 end
 end
-
-ProgressBar =  "║░░░░░░░░░░░░░░░║";for x = 1,16,1 do gg.sleep(150) ProgressBar = ProgressBar:gsub("░","▓",1);gg.toast(ProgressBar) end gg.sleep(150) gg.toast("Load Sukses Memek")
-Check_Login1 = gg.prompt({"⚠Enter Password⚠"},nil,{"000"}) or (function() while true do os.exit() end end)();Check_Login2 = Check_Login1[1] == "E87" or (function() gg.alert("⚠ ERROR ⚠\n❎ Wrong Password ❎"); while true do os.exit() end end)() 
 
 function split(szFullString, szSeparator) local nFindStartIndex = 1 local nSplitIndex = 1 local nSplitArray = {} while true do local nFindLastIndex = string.find(szFullString, szSeparator, nFindStartIndex) if not nFindLastIndex then nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, string.len(szFullString)) break end nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, nFindLastIndex - 1) nFindStartIndex = nFindLastIndex + string.len(szSeparator) nSplitIndex = nSplitIndex + 1 end return nSplitArray end function xgxc(szpy, qmxg) for x = 1, #(qmxg) do xgpy = szpy + qmxg[x]["offset"] xglx = qmxg[x]["type"] xgsz = qmxg[x]["value"] gg.setValues({[1] = {address = xgpy, flags = xglx, value = xgsz}}) xgsl = xgsl + 1 end end function xqmnb(qmnb) gg.clearResults() gg.setRanges(qmnb[1]["memory"]) gg.searchNumber(qmnb[3]["value"], qmnb[3]["type"]) if gg.getResultCount() == 0 then gg.toast(qmnb[2]["name"] .. "开启失败") else gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) if gg.getResultCount() == 0 then gg.toast(qmnb[2]["name"] .. "开启失败") else sl = gg.getResults(999999) sz = gg.getResultCount() xgsl = 0 if sz > 999999 then sz = 999999 end for i = 1, sz do pdsz = true for v = 4, #(qmnb) do if pdsz == true then pysz = {} pysz[1] = {} pysz[1].address = sl[i].address + qmnb[v]["offset"] pysz[1].flags = qmnb[v]["type"] szpy = gg.getValues(pysz) pdpd = qmnb[v]["lv"] .. ";" .. szpy[1].value szpd = split(pdpd, ";") tzszpd = szpd[1] pyszpd = szpd[2] if tzszpd == pyszpd then pdjg = true pdsz = true else pdjg = false pdsz = false end end end if pdjg == true then szpy = sl[i].address xgxc(szpy, qmxg) xgjg = true end end if xgjg == true then gg.toast(qmnb[2]["name"] .. "开启成功,共修改" .. xgsl .. "条数据") else gg.toast(qmnb[2]["name"] .. "开启失败") end end end end
 --配置↑↑↑勿修改，调用方法   xqmnb(qmnb)
@@ -104,12 +95,24 @@ HOME = 1
 function HOME()
 MENU = gg.multiChoice({
 "📀---------≫[Bypass v13 Login Menu [Global]",
+"--------≫ Wallhack & Collor [Lobby/Landing]",
+"------≫ Reset CLIENT [Zone 00.00]", 
+"---≫ Less Recoil [Lobby]",
+"---≫ Headshot & Magic Bullet 100% [Lobby 1x]",
+"---≫ Black Sky [Game]",
+"---≫ Speed Hack Micro [Game]",
 "❌ ------≫ [EXIT SCRIPT]"
 },nil,"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n『SPJK』S PROJECT HACK 📀 『S13-VIP』\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬")
 if MENU == nil then
 else
 if MENU [1] == true then bpG() end 
-if MENU [2] == true then exit() end
+if MENU [2] == true then wh() end 
+if MENU [3] == true then reset() end 
+if MENU [4] == true then less() end 
+if MENU [5] == true then hs() end 
+if MENU [6] == true then blacksky() end
+if MENU [7] == true then speed() end
+if MENU [8] == true then exit() end
 end
 SPJKSC = -1
 end
@@ -186,6 +189,750 @@ gg.editAll('0', gg.TYPE_DWORD)
 gg.clearResults()
 gg.alert("『BYPASS V13』S PROJECT HACK 📀 DONE ! ")
 end
+end
+
+function wh()
+ MN1 = gg.multiChoice({
+      "---≫ WH All Snapdragon",
+      "---≫ WH All Device",
+      "---≫ WH 400",
+       "---≫ WH 410",
+       "---≫ WH 415",
+       "---≫ WH 425",
+       "---≫ WH 430",
+       "---≫ WH 435",
+       "---≫ WH 450",
+       "---≫ WH 615",
+       "---≫ WH 616",
+       "---≫ WH 625",
+       "---≫ WH 626",
+       "---≫ WH 636",
+       "---≫ WH 650",
+       "---≫ WH 653",
+       "---≫ WH 660",
+       "---≫ WH 670",
+       "---≫ WH 710",
+       "---≫ WH 800",
+       "---≫ WH 845",
+       "---≫ Color Green",
+       "---≫ Color Red",
+       "---≫ Color Blue",
+       "---≫ Color Yellow",
+       "---≫ Color White",
+       "---≫ Color Pink",
+       "---≫ Color Orange",
+       "---≫ Color Rainbow",
+       "---≫ Color Black",
+      "---≫ Color Purple",
+      "---≫ Color Mix",
+      "❌ ------≫ [BACK]",
+}, nil, "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n『SPJK』S PROJECT HACK 📀 『S13-VIP』\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬")
+if MN1 == nil then
+else
+if MN1[1] == true then WHA()end
+if MN1[2] == true then WHAD()end
+if MN1[3] == true then WH400()end
+if MN1[4] == true then WH410()end
+if MN1[5] == true then WH415()end
+if MN1[6] == true then WH425()end
+if MN1[7] == true then WH430()end
+if MN1[8] == true then WH435()end
+if MN1[9] == true then WH450()end
+if MN1[10] == true then WH615()end
+if MN1[11] == true then WH616()end
+if MN1[12] == true then WH625()end
+if MN1[13] == true then WH626()end
+if MN1[14] == true then WH636()end
+if MN1[15] == true then WH650()end
+if MN1[16] == true then WH653()end
+if MN1[17] == true then WH660()end
+if MN1[18] == true then WH670()end
+if MN1[19] == true then WH710()end
+if MN1[20] == true then WH800()end
+if MN1[21] == true then WH845()end
+if MN1[22] == true then C1()end
+if MN1[23] == true then C2()end
+if MN1[24] == true then C3()end
+if MN1[25] == true then C4()end
+if MN1[26] == true then C5()end
+if MN1[27] == true then C6()end
+if MN1[28] == true then C7()end
+if MN1[29] == true then C8()end
+if MN1[30] == true then C9()end
+if MN1[31] == true then C10()end
+if MN1[32] == true then C11()end
+if MN1[33] == true then HOME()end
+end
+SPJKSC = -1
+end
+
+function reset()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_DATA)
+gg.searchNumber("1.1754945e-37",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+gg.getResults(1000)
+gg.editAll("0",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+gg.getResults(1000)
+gg.editAll("0",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+gg.searchNumber("0",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+gg.getResults(1000)
+gg.editAll("1.1754945e-37",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+gg.clearResults()
+gg.toast("Tap OK and Enter match Again")
+end
+
+
+function less()
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("1,348,759,109;1953067887;1,634,692,166;1,920,287,604::28", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1634692166", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("1634692266", gg.TYPE_DWORD)
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function hs()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("9.20161819458;23;25;30.5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResultsCount()
+gg.searchNumber("25;30.5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("180", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function blacksky()
+gg.clearResults()
+gg.setRanges(131072)
+gg.clearResults()
+gg.searchNumber("100F;1F;1,008,981,770D:99", 16, false)
+gg.searchNumber("100", 16, false)
+gg.getResults(100)
+gg.editAll("-90", 16)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function speed()
+gg.clearResults()
+gg.setRanges(32)
+gg.searchNumber("1;1;1;0.0001;20;0.0005;0.4::50", 16, false, 536870912, 0, -1)
+gg.searchNumber("1", 16, false, 536870912, 0, -1)
+gg.getResults(300)
+gg.editAll("1.06", 16)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WHA()
+  gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("5.6447121e21;-8.3252823e-40;4.9252852e21::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-8.3252823e-40", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("6444", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("4.9068373e21;-3.5875931e-39;4.8699618e21::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-3.5875931e-39", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("6444", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("5.0544113e21;-3.4039221e-39;4.8699607e21::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-3.4039221e-39", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("6444", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("5.6447206e21;-1.0161992e-39;4.9068396e21::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-1.0161992e-39", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("6444", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("4.7223665e21;-8.3246237e-40;4.8330515e21::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-8.3246237e-40", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("6444", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("4.7408149e21;-5.5695588e-40;4.814603e21::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-5.5695588e-40", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(6)
+gg.editAll("6444", gg.TYPE_FLOAT)
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WHAD()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("135,215D;4,140D;3.7615819e-37;2::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("194D;3.7615819e-37;2;-1;1;-127::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH400()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("228;1,073,741,824;1,073,741,824;229;-1,082,130,432:29", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1,073,741,824", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("1,123,024,896", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("3.3631163e-44;2.0;3.5032462e-44;-1.0;3.643376e-44;3.7835059e-44;-1.0;3.9236357e-44;4.0637655e-44;1.0;-127.0:129", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH410()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_HEAP)
+gg.searchNumber("3.3631163e-44;2.0;3.5032462e-44;-1.0;3.643376e-44;3.7835059e-44;-1.0;3.9236357e-44;4.0637655e-44;1.0;-127.0:129", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("3.1809475e-43;3.1949605e-43;2.0;3.2089735e-43:53", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_HEAP)
+gg.searchNumber("3.2229865e-43F;2.0F;-1.0F;-1.0F;2.0F:145", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(360)
+gg.editAll("150", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH415()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_HEAP)
+gg.searchNumber("228;1,073,741,824;1,073,741,824;229;-1,082,130,432:29", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1,073,741,824", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("1,123,024,896", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_HEAP)
+gg.searchNumber("3.3631163e-44;2.0;3.5032462e-44;-1.0;3.643376e-44;3.7835059e-44;-1.0;3.9236357e-44;4.0637655e-44;1.0;-127.0:129", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("3.1809475e-43;3.1949605e-43;2.0;3.2089735e-43:53", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH425()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("2.9427268e-44;2.0;3.0828566e-44;-1.0;3.2229865e-44;3.3631163e-44;3.643376e-44:97", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("3.1529215e-43;2.0F;3.1669345e-43F;3.1809475e-43:49", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH430()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("5.8013756e-42F;-5.5695588e-40F;2.0F::100", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;-1.0F;-127.0F::520", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(20)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("4,141D;4.7408155e21;-5.5693206e-40;4.814603e21;3.7615819e-37;2:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(4)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH435()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("3.2229865e-43F;2.0F;-1.0F;-1.0F;2.0F:145", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(360)
+gg.editAll("150", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("27;15;26;23;1,073,741,824;24;-1,082,130,432:61", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1,073,741,824", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("1,123,024,896", gg.TYPE_DWORD)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2;3.7615819e-37;4.814603e21;4.7408149e21", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(20)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2;3.7615819e-37;1.3912552e-19;4.9252829e21", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(20)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;-1.0F;1.0F;-127.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(20)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH450()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("135,215D;4,140D;3.7615819e-37;2::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("194D;3.7615819e-37;2;-1;1;-127::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("1.1202013e-19;1.1202017e-19;2::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(1)
+gg.editAll("9999", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("150", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("5.8013756e-42F;-5.5695588e-40F;2.0F::100", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("150", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("4.7961574e21;3.7615819e-37;2::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("150", gg.TYPE_FLOAT)
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH615()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_HEAP)
+gg.searchNumber("3.2229865e-43;2.0;-1.0;-1.0;2.0:145", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("122", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_HEAP)
+gg.searchNumber("3.3631163e-44;2.0;3.5032462e-44;-1.0;3.643376e-44;3.7835059e-44;-1.0;3.9236357e-44;4.0637655e-44;1.0;-127.0:129", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("3.1809475e-43;3.1949605e-43;2.0;3.2089735e-43:53", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH616()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("4,140D;4.7408166e21F;4.7223665e21;0D;0D;0D;0D;0D;0D;-0.0F;2.0F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2.718519e-43;2.0F;-1.0F;1.0F;-127F;0.24022650719F;-0.0", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH625()
+    gg.clearResults()
+    gg.setRanges(gg.REGION_BAD)
+    gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;-1.0F;1.0F;-127.0F;0.00999999978F::200",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+    gg.searchNumber("2",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+    gg.getResults(30)
+    gg.editAll("120",gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.searchNumber("5.8013756e-42F;-5.5695588e-40F;2.0F::100",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+    gg.searchNumber("2",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
+    gg.getResults(30)
+    gg.editAll("120",gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH626()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;-1.0F;1.0F;-127.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("5.8013756e-42F;-5.5695588e-40F;2.0F::100", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH636()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;-1.0F;1.0F;-127.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("5.8013756e-42F;-5.5695588e-40F;2.0F::100", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH650()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;-1.0F;1.0F;-127.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("5.8013756e-42F;-5.5695588e-40F;2.0F::100", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH653()
+gg.setRanges(gg.REGION_BAD)
+gg.clearResults()
+gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("5.8013756e-42F;-5.5695588e-40F;2.0F::100", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber(2, gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH660()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("4,140D;4.7408166e21;5.6896623e-29;4.7961574e21;3.7615819e-37;2:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(3)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("200,866D;0.24022650719;0.69314718246;0.00999999978;1;-1;2;-127:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(2)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("32,770D;0.01799999923;0.29907226562;-1;2:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(4)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("50,331,648D;0.01799999923;0.29907226562;0.5869140625;0.11401367188;-1;2:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(2)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("50,331,648D;0.04000854492;0.11999511719;-0.02749633789;-0.57177734375;-1;2:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("-1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(1)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("266,400D;0.24022650719;0.69314718246;0.00999999978;1;-1;-127;2:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("50,331,648D;0.04000854492;0.11999511719;-0.02749633789;-0.57177734375;-1;2:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(2)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("4,140D;4.7408149e21;-5.5695588e-40;4.814603e21;3.7615819e-37;2:", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(20)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH670()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("274,677,779D;2.25000452995;2;1.6623054e-19", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(20)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("218D;3.7615819e-37;2;-1;1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("95D;2;9.2194229e-41", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(15)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("206D;3.7615819e-37;2;-1;1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH710()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("274,677,779D;2.25000452995;2;1.6623054e-19", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(20)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("218D;3.7615819e-37;2;-1;1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("95D;2;9.2194229e-41", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(15)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("206D;3.7615819e-37;2;-1;1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("130", gg.TYPE_FLOAT)
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH800()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("5.1097599e21;2.0;1.6623071e-19;3.6734297e-39;1.66433e10::17", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("2.0;-1.0;0.0;1.0;-127.0::17", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(30)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function WH845()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("95D;2;9.2194229e-41", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(15)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("206D;3.7615819e-37;2;-1;1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("120", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C1()
+gg.clearResults()
+gg.setRanges(131072)
+gg.searchNumber("32768;-2134900726;32769;-2134900725;32770;-2134900724::", 4, false, 536870912, 0, -1)
+gg.searchNumber("32769", 4, false, 536870912, 0, -1)
+gg.getResults(100)
+gg.editAll("4", 4)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C2()
+gg.clearResults()
+gg.searchNumber("8,196D;8,192D;8,200D::", 4, false, 536870912, 0, -1)
+gg.searchNumber("8200", 4, false, 536870912, 0, -1)
+gg.getResults(10)
+gg.editAll("7", 4)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C3()
+gg.setRanges(131072)
+gg.searchNumber("856128", 4, false, 536870912, 0, -1)
+gg.getResults(4)
+gg.editAll("856130", 4)
+gg.clearResults()
+gg.searchNumber("196610;1280;196608:25", 4, false, 536870912, 0, -1)
+gg.searchNumber("196608", 4, false, nil, 0, -1)
+gg.getResults(10)
+gg.editAll("9999", 4)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C4()
+gg.clearResults()
+  gg.setRanges(gg.REGION_BAD)
+  gg.searchNumber("256;8200;13::150", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("8200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(10)
+  gg.editAll("6", gg.TYPE_DWORD)
+  gg.toast("TELEGRAM: @spjkchannel")
+end
+  
+
+function C5()
+gg.clearResults()
+gg.setRanges(131072)
+gg.searchNumber("32768;-2134900726;32769;-2134900725;32770;-2134900724::", 4, false, 536870912, 0, -1)
+gg.searchNumber("32768;32770::", 4, false, 536870912, 0, -1)
+gg.getResults(100)
+gg.editAll("4", 4)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C6()
+gg.clearResults()
+gg.setRanges(131072)
+gg.searchNumber("32768;-2134900726;32769;-2134900725;32770;-2134900724::", 4, false, 536870912, 0, -1)
+gg.searchNumber("32768;32770::", 4, false, 536870912, 0, -1)
+gg.getResults(100)
+gg.editAll("4", 4)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C7()
+gg.clearResults()
+  gg.setRanges(gg.REGION_BAD)
+  gg.searchNumber("1.8189894e-12;3;4.75926e21", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("3", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(10)
+  gg.editAll("400", gg.TYPE_FLOAT)
+  gg.clearResults()
+  gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C8()
+gg.clearResults()
+gg.setRanges(131072)
+gg.searchNumber("4.5926155869782e-41;1.0863202718415e-19", 16, false, 536870912, 0, -1)
+gg.searchNumber("1.0863202718415e-19", 16, false, 536870912, 0, -1)
+gg.getResults(10)
+gg.editAll("1.0863202718415e-25", 16)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C9()
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("0.05499718338;1.0",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1",gg.TYPE_FLOAT, false,gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("-9999",gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C10()
+gg.clearResults()
+gg.setRanges(131072)
+gg.searchNumber("32769", 4, false, 536870912, 0, -1)
+gg.refineNumber("32769", 4, false, 536870912, 0, -1)
+gg.refineAddress("518")
+gg.getResults(9999)
+gg.editAll("\"32781\"", 4)
+gg.toast("TELEGRAM: @spjkchannel")
+end
+
+function C11()
+gg.setRanges(131072)
+gg.searchNumber("8,196D;8,192D;8,200D::", 4, false, 536870912, 0, -1)
+gg.searchNumber("8200", 4, false, 536870912, 0, -1)
+gg.getResults(10)
+gg.editAll("16", 4)
+gg.clearResults()
+gg.toast("TELEGRAM: @spjkchannel")
 end
 
 function exit() 
