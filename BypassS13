@@ -14,9 +14,6 @@ echo "
 =================================================
 "
 sleep 2
-echo "__Kalian bisa pakai bypass script di Lobby/Login Menu"
-echo "__You can use bypass script in Lobby/Login Menu"
-sleep 1
 if [ ! -d "/data/data/com.tencent.ig" ];
 then
 echo "- PUBGM GLOBAL Not Instaliled"
@@ -102,7 +99,7 @@ echo "Installasi Selesai"
 echo""
 sleep 1
 echo "_____[RULES]"
-echo "___Use BYPASS LOGIN MENU Script SPJK"
+echo "___Use BYPASS LOBBY Script SPJK"
 echo ""
 echo "SAFE FEATURES :"
 echo "-Wallhack & Collor"
