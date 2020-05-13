@@ -35,6 +35,7 @@ DATA5=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTracker
 PAKS=data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
 BUSYBOX=/sbin/.magisk/busybox/
 #
+rm -rf /data/data/com.tencent.ig/files &> /dev/null
 rm -rf /data/data/com.tencent.ig/app_crashrecord &> /dev/null
 touch /data/data/com.tencent.ig/app_crashrecord &> /dev/null
 rm -rf /storage/emulated/0/.backups/com.tencent.ig &> /dev/null
