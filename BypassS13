@@ -4,7 +4,7 @@ echo "███████╗    ██████╔╝         ██║    
 echo "╚════██║    ██╔═══╝     ██   ██║    ██╔═██╗ "
 echo "███████║    ██║         ╚█████╔╝    ██║  ██╗"
 echo "╚══════╝    ╚═╝          ╚════╝     ╚═╝  ╚═╝"
-echo "Updated 13 Mei 2020 23.55 by @admsprojecthack"
+echo "Updated 14 Mei 2020 03.39 by @admsprojecthack"
 echo "
 =================================================
 [ VIP HACK PUBG MOBILE V-3 0.18.0 SEASON 13 ]
@@ -35,9 +35,10 @@ DATA5=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTracker
 PAKS=data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
 BUSYBOX=/sbin/.magisk/busybox/
 #
-rm -rf /data/data/com.tencent.ig/files &> /dev/null
 rm -rf /data/data/com.tencent.ig/app_crashrecord &> /dev/null
 touch /data/data/com.tencent.ig/app_crashrecord &> /dev/null
+rm -rf /data/data/com.tencent.ig/files/tss_tmp &> /dev/null
+touch /data/data/com.tencent.ig/files/tss_tmp &> /dev/null
 rm -rf /storage/emulated/0/.backups/com.tencent.ig &> /dev/null
 touch /storage/emulated/0/.backups/com.tencent.ig &> /dev/null
 $BUSYBOX/chattr -i /storage/emulated/0/.backups/com.tencent.ig &> /dev/null
@@ -45,9 +46,6 @@ rm -rf /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
 touch /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
 $BUSYBOX/chattr -i /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
 chmod -R 555 /data/media/0/MidasOversea/GUID &> /dev/null
-echo "___Deleting Magisk LOG.."
-rm -rf /cache/magisk.log &> /dev/null
-rm -rf /cache/magisk.log.bak &> /dev/null
 echo "____Kill Game Main Server....."
 dd if=/dev/urandom of=/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12600.pak bs=1400 count=5678  &> /dev/null
 dd if=/dev/urandom of=/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.18.0.12605.pak bs=1400 count=5123  &> /dev/null
@@ -128,8 +126,19 @@ sleep 30
 PACKAGE='com.tencent.ig'
 while [ $(pidof $PACKAGE) ]
 do
-rm -rf /cache/magisk.log &> /dev/null
-rm -rf /cache/magisk.log.bak &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_appcache > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/app_bugly > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/cache > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/code_cache > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/app_webview_imsdk_inner_webview > /dev/null 2>&1
+rm -rf /data/data/com.tencent.ig/app_webview > /dev/null 2>&1
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/cache > /dev/null 2>&1
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/tbslog > /dev/null 2>&1
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs > /dev/null 2>&1
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Pandora > /dev/null 2>&1                                                                                                                                                                                                                                                                                                                                                                                                                                          #@PLAYDF25
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Screenshots > /dev/null 2>&1
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/vmpcloudconfig.json > /dev/null 2>&1
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/cacheFile.txt > /dev/null 2>&1
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "===========RECORD CHUNK FILES DELETED━━━━SPJK━━━━�"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
