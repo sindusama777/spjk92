@@ -47,9 +47,6 @@ rm -rf /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
 touch /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
 $BUSYBOX/chattr -i /storage/emulated/0/tencent/Midas/Log/com.tencent.ig &> /dev/null
 chmod -R 555 /data/media/0/MidasOversea/GUID &> /dev/null
-rm -rf /data/data/com.tencent.ig/files &>/dev/null
-rm -rf /data/data/com.tencent.ig/databases &>/dev/null
-touch /data/data/com.tencent.ig/files &> /dev/null
 echo "___Deleting Magisk LOG.."
 rm -rf /cache/magisk.log &> /dev/null
 rm -rf /cache/magisk.log.bak &> /dev/null
