@@ -14,7 +14,7 @@ echo "
 =================================================
 "
 sleep 1
-echo "Beta TESTER by @admsprojecthack"
+echo "Updated 5 Juni 2020 by @admsprojecthack"
 echo ""
 sleep 2
 echo "[STARTING BYPASS]"
@@ -110,7 +110,6 @@ rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrack
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifsbk
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/*cures.ifs.res
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_temp
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/cache/*
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "===========RECORD CHUNK FILES DELETED━━━━SPJK━━━━�"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
