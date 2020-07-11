@@ -1,3 +1,11 @@
+echo "SPJK SERVER S13 CLOSED"
+echo "Tell @admsprojecthack for buy S14"
+exit 0;
+
+
+
+
+
 sd=storage/emulated/0
 DATA1=storage/emulated/0/Android/data/com.tencent.ig
 DATA2=storage/emulated/0/Android/data/com.tencent.ig/files
@@ -53,7 +61,7 @@ sleep 2
 am start -n bin.mt.plus/bin.mt.plus.Main  &> /dev/null
 sleep 2
 echo "Opening Game Automatic"
-sleep 1
+sleep 
 am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity  &> /dev/null
 sleep 30
 PACKAGE='com.tencent.ig'
