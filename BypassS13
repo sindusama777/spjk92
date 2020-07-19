@@ -1,0 +1,150 @@
+PAKS=data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+SAVED=data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved
+DATA=data/data/com.tencent.ig
+#
+echo "███████╗    ██████╗          ██╗    ██╗  ██╗"
+echo "██╔════╝    ██╔══██╗         ██║    ██║ ██╔╝"
+echo "███████╗    ██████╔╝         ██║    █████╔╝ "
+echo "╚════██║    ██╔═══╝     ██   ██║    ██╔═██╗ "
+echo "███████║    ██║         ╚█████╔╝    ██║  ██╗"
+echo "╚══════╝    ╚═╝          ╚════╝     ╚═╝  ╚═╝"
+sleep 1
+echo "
+=================================================
+[ VVIP HACK PUBG MOBILE 0.19.0 SEASON 14 ]
+[ TELEGRAM CHANNEL: @spjkchannel ]
+[ CEATOR: @admsprojecthack ]
+[ CODER by: Bagus Satria Sindurahman Putra ]
+=================================================
+"
+sleep 1
+echo "[STARTING BYPASS] ---WAIT"
+wget -q https://raw.githubusercontent.com/sindusama777/spjk92/master/data14 &>/dev/null
+mv data14 /data/local/ &>/dev/null
+#
+if [ ! -f "/storage/emulated/0/Login.conf" ];
+then
+echo "Silahkan Login Script SPJK terlebih dahulu!"
+echo "Please Login SPJK Script frist!"
+echo "Only Member VIP SPJK CAN USE THIS !"
+exit 0;
+fi
+if [ ! -f "/data/local/data14" ];
+then
+echo "Data SPJK Not Found, Check Internet And try Again!"
+exit 0;
+fi
+if [ ! -d "/data/local/backup" ];
+then
+mkdir /data/local/backup &>/dev/null
+fi
+if [ ! -f "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.19.0.13906.pak" ];
+then
+echo "Please Install PUBGM 0.19.0 Official 32bit!"
+exit 0;
+fi
+#backupdata
+cp -R /$PAKS/apollo_* /data/local/backup &>/dev/null
+cp -R /$PAKS/core_patch_* /data/local/backup &>/dev/null
+cp -R /$PAKS/filelist.json /data/local/backup &>/dev/null
+cp -R /$PAKS/game_patch_* /data/local/backup &>/dev/null
+#cp -R /$PAKS/res_minerva* /data/local/backup &>/dev/null
+rm -rf /$PAKS/apollo_* &>/dev/null
+rm -rf /$PAKS/core_patch_* &>/dev/null
+rm -rf /$PAKS/filelist.json &>/dev/null
+rm -rf /$PAKS/game_patch_* &>/dev/null
+#rm -rf /$PAKS/res_minerva* &>/dev/null
+#injectdata
+cp -R /data/local/data14 /$PAKS/apollo_reslist.flist &>/dev/null
+cp -R /data/local/data14 /$PAKS/core_patch_0.19.0.13901.pak &>/dev/null
+cp -R /data/local/data14 /$PAKS/filelist.json &>/dev/null
+cp -R /data/local/data14 /$PAKS/game_patch_0.19.0.13900.pak &>/dev/null
+cp -R /data/local/data14 /$PAKS/game_patch_0.19.0.13901.pak &>/dev/null
+cp -R /data/local/data14 /$PAKS/game_patch_0.19.0.13905.pak &>/dev/null
+cp -R /data/local/data14 /$PAKS/game_patch_0.19.0.13906.pak &>/dev/null
+cp -R /data/local/data14 /$PAKS/game_patch_0.19.0.13907.pak &>/dev/null
+cp -R /data/local/data14 /$PAKS/game_patch_0.19.0.13908.pak &>/dev/null
+#cp -R /data/local/data14 /$PAKS/res_minerva1012_0.19.0.13900.pak &>/dev/null
+#cp -R /data/local/data14 /$PAKS/res_minerva1013_0.19.0.13900.pak &>/dev/null
+#cp -R /data/local/data14 /$PAKS/res_minerva1014_0.19.0.13900.pak &>/dev/null
+#cp -R /data/local/data14 /$PAKS/res_minerva1015_0.19.0.13900.pak &>/dev/null
+#cp -R /data/local/data14 /$PAKS/res_minerva1016_0.19.0.13900.pak &>/dev/null
+#
+rm -rf /$DATA/app* &>/dev/null
+chmod 400 /$DATA/files/tss_tmp &>/dev/null
+chmod 400 /$DATA/files/tss_tmp/* &>/dev/null
+rm -rf /$SAVED/GameErrorNoRecords &>/dev/null
+rm -rf /$SAVED/upload.voice &>/dev/null
+rm -rf /$SAVED/Logs &>/dev/null
+rm -rf /$SAVED/RoleInfo &>/dev/null
+rm -rf /$SAVED/UpdateInfo &>/dev/null
+rm -rf /$SAVED/Pandora &>/dev/null
+rm -rf /$SAVED/rawdata &>/dev/null
+rm -rf /$SAVED/TableDatas &>/dev/null
+rm -rf /$SAVED/PufferTmpDir &>/dev/null
+chmod 555 /$SAVED &>/dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/.fff &>/dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/.system_android_l2 &>/dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/cache &>/dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/ca-bundle.pem &>/dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/tbslog &>/dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/login-identifier.txt &>/dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/cacheFile.txt &>/dev/null
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/vmpcloudconfig.json &>/dev/null
+chmod 555 /data/media/0/Android/data/com.tencent.ig/files &>/dev/null
+chmod 664 /$PAKS/* &>/dev/null
+chmod 775 /$PAKS/ODPaks &>/dev/null
+echo "Setup Data -----DONE"
+sleep 1
+echo "Starting Game Guardian...\n"
+sleep 1
+am start -n com.hydsxi.rjr/com.hydsxi.rjr.MainActivity &>/dev/null
+sleep 2
+am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity &>/dev/null
+sleep 25
+chmod 004 /$DATA/lib/libtersafe.so &>/dev/null
+chmod 004 /$DATA/lib/libUE4.so &>/dev/null
+chmod 004 /$DATA/lib/libTDataMaster.so &>/dev/null
+chmod 004 /$DATA/lib/libgcloud.so &>/dev/null
+sleep 10
+rm -rf /$PAKS/puffer* &>/dev/null
+rm -rf /$PAKS/Puffer* &>/dev/null
+#
+PACKAGE='com.tencent.ig'
+while [ $(pidof $PACKAGE) ]
+do
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "-PROTECTED BY @admsprojecthack━━━━SPJK━━━━�"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+date
+sleep 5
+if [ ! $(pidof $PACKAGE) ]; then
+break
+fi
+sleep 1
+done
+am start -n bin.mt.plus/bin.mt.plus.Main &>/dev/null
+echo "•PUBG MOBILE STOPED"
+echo "Repairing Game Data...!"
+sleep 1
+echo ""
+echo "Wait....."
+echo "Closeing Game Guardian...."
+am force-stop com.hydsxi.rjr &>/dev/null
+rm -rf /data/local/data14 &>/dev/null
+rm -rf /$PAKS/apollo_* &>/dev/null
+rm -rf /$PAKS/core_patch_* &>/dev/null
+rm -rf /$PAKS/filelist.json &>/dev/null
+rm -rf /$PAKS/game_patch_* &>/dev/null
+#rm -rf /$PAKS/res_minerva* &>/dev/null
+cp -R /data/local/backup/* /$PAKS/ &>/dev/null
+rm -rf /data/local/backup/* &>/dev/null
+chmod 775 /$SAVED &>/dev/null
+chmod 700 /$DATA/files/tss_tmp &>/dev/null
+chmod 600 /$DATA/files/tss_tmp/* &>/dev/null
+chmod 755 /$DATA/lib/* &>/dev/null
+chmod 775 /data/media/0/Android/data/com.tencent.ig/files &>/dev/null
+echo "All DONE !"
+echo "• Coding By @admsprojecthack"
+killall bin.mt.plus &>/dev/null
+killall com.termux &>/dev/null
